@@ -55,6 +55,7 @@
             {
                 for (int j = 0; j < columns; j++) // nested loop controls our columns
                 {
+
                     if ((i + j) % 2 == 0)
                     {
                         Console.Write(white + " ");  //if it´s even we write white
@@ -124,8 +125,6 @@
                 Console.WriteLine();
 
             }
-
-
 
             Console.ReadKey();
 
