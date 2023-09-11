@@ -92,9 +92,9 @@
 
             Console.WriteLine("Var ska pjäsen stå? (ex E4)"); //user enters location
             string answer = Console.ReadLine().ToUpper();  //use ToUpper to make sure to get a capital letter
-            int signColumn = Convert.ToInt32(answer[0]);  //convert index 0 of answer to int
+            int signColumn = Convert.ToInt32(answer[0]);  //convert index 0 of answer to int. We get ascii nr
             int signRow = Convert.ToInt32(answer[1].ToString());  //convert index 1 of answer to int
-            signColumn = signColumn - 'A' + 1;                  //use asci nr to calculate signRow
+            signColumn = signColumn - 'A' + 1;                  //use ascii nr to calculate signRow
 
 
             for (int i = 0; i < rows; i++)
