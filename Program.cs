@@ -28,7 +28,7 @@
                         Console.Write("◼︎");  //if it´s uneven we write blackbox
                     }
                 }
-                Console.WriteLine();
+                Console.WriteLine();  //to get a new line
             }
 
 
@@ -66,7 +66,7 @@
                     }
                 }
 
-                Console.WriteLine();  //to get a new line
+                Console.WriteLine();
 
 
             }
@@ -81,20 +81,20 @@
 
             columns = rows;
 
-            Console.WriteLine("Hur ska vita rutor se ut?"); //user choose sign for white
+            Console.WriteLine("Hur ska vita rutor se ut?");
             white = Console.ReadLine();
 
             Console.WriteLine("Hur ska svarta rutor se ut?");
             black = Console.ReadLine();
 
-            Console.WriteLine("Hur ska pjäsen se ut?");
+            Console.WriteLine("Hur ska pjäsen se ut?");  //user choose specialsign
             string specialSign = Console.ReadLine();
 
-            Console.WriteLine("Var ska pjäsen stå? (ex E4)");
-            string answer = Console.ReadLine();
-            int signRow = Convert.ToInt32(answer[0]);
-            int signColumn = Convert.ToInt32(answer[1].ToString());
-            signRow = signRow - 'A' + 1;                  //only works if user use capital letter!!
+            Console.WriteLine("Var ska pjäsen stå? (ex E4)"); //user enters location
+            string answer = Console.ReadLine().ToUpper();  //use ToUpper to make sure to get a capital letter
+            int signRow = Convert.ToInt32(answer[0]);  //convert index 0 of answer to int
+            int signColumn = Convert.ToInt32(answer[1].ToString());  //convert index 1 of answer to int
+            signRow = signRow - 'A' + 1;                  //use asci nr to calculate signRow
 
 
             for (int i = 0; i < rows; i++)
